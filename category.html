@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOMAS - المتجر</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/category.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header-icons">
+      <a href="/cart.html" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+      <a href="#" class="quick-view-icon">
+        <i class="fas fa-eye"></i>
+      </a>
+    </div>
+
+    <div class="toolbar">
+      <div class="view-options">
+        <button class="active" data-view="grid"><i class="fas fa-th-large"></i> عرض شبكي</button>
+        <button data-view="list"><i class="fas fa-list"></i> عرض قائمة</button>
+      </div>
+      <div class="price-filter">
+        <span>تصفية حسب السعر:</span>
+        <input type="range" class="price-slider" id="priceRange" min="0" max="1000" value="1000">
+        <span class="price-values">
+          حتى <span id="maxPrice">1000</span> جنيه
+        </span>
+      </div>
+    </div>
+
+    <div class="products-grid" id="productsContainer">
+      <!-- سيتم ملؤها بواسطة JavaScript -->
+    </div>
+  </div>
+
+  <script src="JS/category.js"></script>
+  <!-- <script src="JS/script.js"></script> -->
+
+</body>
+
+</html>

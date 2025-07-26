@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-comerce Project</title>
+    <link rel="icon" type="img/x-icon" href="img/favicon.ico">
+    <!-- hover lib -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!-- animate lib -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- css header -->
+    <link rel="stylesheet" href="CSS/header.css">
+</head>
+
+<body>
+    <!-- start & nav home -->
+    <section id="up" class="header w-100  overflow-x-hidden ">
+        <!-- <div class="login-header d-none  bg-dark d-md-flex align-items-center text-light ">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>Free shipping on domestic orders over $150</div>
+                <div class="login-btn">
+                    <i class="fa-regular fa-user"></i>
+                    <button id="openLogin" class="btn-head ">Login / Register</button>
+                </div>
+            </div>
+        </div> -->
+        <!-- start nav -->
+        <div data-bs-spy="scroll" data-bs-target="#snapbuy-nav" class="cover ">
+            <nav id="snapbuy-nav" class="navbar sticky-navbar navbar-expand-lg bg-light">
+                <div class="container">
+                    <!-- logo -->
+                    <a class="navbar-brand text-black  me-auto" href="#"><span
+                            class="logo-font d-flex justify-content-center align-items-center fs-5 "
+                            style=" color: var(--second-color); "><img class="w-25 opacity-75 pe-1 h-25 "
+                                src="img/favicon.ico" alt=""> SnapBuy</span></a>
+
+                    <!-- phone& tablts -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid bar-h text-dark fa-bars"></i>
+
+                    </button>
+                    <!-- ===============user btn========== -->
+                    <!-- <a href="/login.html" id="login-user-sm"
+                        class="d-lg-none text-dark text-decoration-none d-flex align-items-center">
+                        <i class="fa-regular text-decoration-none p-2 fa-user"></i>
+                    </a> -->
+
+                    <!-- links $ icons -->
+                    <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNavDropdown">
+                        <!-- links-->
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="Ecategory dropdown-item hvr-forward" href="/category copy.html"
+                                            data-category="men">Men Clothes</a></li>
+                                    <li><a class="Ecategory dropdown-item hvr-forward" href="/category copy.html"
+                                            data-category="women">Women clothes</a></li>
+                                    <li><a class="Ecategory dropdown-item hvr-forward" href="/category copy.html"
+                                            data-category="accessories">Accessories</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/contactus.html">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <!-- icons-->
+                        <div class="d-flex">
+                            <!-- search icon -->
+                            <input type="text" id="search-bar"
+                                class="form-control border-0 p-0 text-center  overflow-hidden"
+                                placeholder="Search here">
+                            <button id="search-icon" class="btn ">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <!-- shopping btn -->
+                            <a href="cart.html" class="text-dark text-decoration-none position-relative m-0 d-flex "><i
+                                    class="fa-solid text-dark text-decoration-none  p-2 shop-h fa-cart-shopping"></i>
+                                <span class="  p-0 m-0 " id="cart-count">0</span></a>
+
+
+                            <!-- <div class="header-icons">
+                                <a href="cart.html" class="cart-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="cart-count">0</span>
+                                </a> -->
+                                <!-- <a href="#" class="quick-view-icon">
+                                    <i class="fas fa-eye"></i>
+                                </a> -->
+                            <!-- </div> -->
+                            <!-- =========like btn======= -->
+                            <a href="#" class="text-dark text-decoration-none position-relative m-0 d-flex "><i
+                                    class="fa-regular text-dark text-decoration-none   p-2 shop-h fa-heart"></i>
+                                <span class="  p-0 m-0 " id="like-count">0</span></a>
+
+                            <!-- ==============user btn=============== -->
+                             <!-- ############################################### -->
+                            <a  id="login-user-lg"
+                                class="d-none d-lg-flex   text-dark text-decoration-none align-items-center">
+                                <i class="fa-regular text-decoration-none p-2 fa-user"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="search-results" class="row g-3 m-0 position-absolute bg-white  p-5">
+                </div>
+            </nav>
+
+
+        </div>
+        <!-- end nav -->
+        <!-- start Carousel -->
+        <div class="owl-carousel carousel1 owl-theme">
+            <div class="item ">
+                <img src="img/maxresdefault (2).jpg" alt="Image 1" />
+                <div class="overlay-content text-white ">
+                    <p>Winter Special Collection</p>
+                    <h1 class="display-4 mb-5 fw-bold">New Collection With <br>Modern Style</h1>
+                    <a href="#" class="hvr-sweep-to-right  text-decoration-none px-5 py-3 swep-a">Shop Now <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/slider11.jpg" alt="Image 2" />
+                <div class="overlay-content text-white text-decoration-none">
+                    <p>Winter Special Collection</p>
+                    <h1 class="display-4 mb-5 fw-bold">New Collection With <br>Modern Style</h1>
+                    <a href="#" class="hvr-sweep-to-right text-decoration-none px-5 py-3 swep-a">Shop Now <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/slider.gif" alt="Image 3" />
+                <div class="overlay-content text-white ">
+                    <p>Winter Special Collection</p>
+                    <h1 class="display-4 mb-5 fw-bold">New Collection With <br>Modern Style</h1>
+                    <a href="#" class="hvr-sweep-to-right text-decoration-none px-5 py-3 swep-a">Shop Now <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- end Carousel -->
+    </section>
+    <!-- end home -->
+    <!-- start feature wrapper-->
+    <section class="feature-wrapper my-5  container w-100  ">
+        <div class="row ">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="feature-item p-4  d-flex align-items-center">
+                    <div class="icon pe-3"> <i class="fa-solid fs-1 fa-truck" style=" color: var(--second-color);"></i>
+                    </div>
+                    <div class="content">
+                        <p class="m-0">Free Delivary</p>
+                        <p class="m-0 fw-light">Orders from all item</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="feature-item p-4  d-flex align-items-center">
+                    <div class="icon pe-3"> <i class="fa-solid fs-1 fa-dollar-sign"
+                            style=" color: var(--second-color);"></i> </div>
+                    <div class="content">
+                        <p class="m-0">Return & Refunf</p>
+                        <p class="m-0 fw-light">Maney back guarantee</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="feature-item p-4  d-flex align-items-center">
+                    <div class="icon pe-3"> <i class="fa-solid fs-1 fa-percent"
+                            style=" color: var(--second-color);"></i>
+                    </div>
+                    <div class="content">
+                        <p class="m-0">
+                            Member Discount</p>
+                        <p class="m-0 fw-light">Onevery order over $140.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="feature-item p-4  d-flex align-items-center">
+                    <div class="icon pe-3"> <i class="fa-solid fs-1 fa-headphones"
+                            style=" color: var(--second-color);"></i>
+                    </div>
+                    <div class="content">
+                        <p class="m-0">Support 24/7</p>
+                        <p class="m-0 fw-light">Contact us 24 hours a day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end feature wrapper-->
+    <!-- start shop section-->
+    <section class="shop-bg-section">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+
+                <div class="Ecategory col-lg-6" data-category="accessories">
+                    <a href="/category copy.html" class="bg-img position-relative d-block">
+                        <img src="/img/14.jpg" class="mb-3 img-fluid" alt="Accessories category">
+                        <div class="category-info overlay-text">
+                            <h3>Accessories</h3>
+                            <p class="text-secondary">New Collection</p>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+                <div class="col-lg-6">
+                    <a href="/category copy.html" class="Ecategory bg-img position-relative d-block"
+                        data-category="men">
+                        <img src="img/15.jpg" class="mb-3 img-fluid" alt="Man category">
+                        <div class="category-info overlay-text">
+                            <h3>Man</h3>
+                            <p class="text-secondary">New Collection</p>
+                        </div>
+                    </a>
+
+                    <a href="/category copy.html" class="Ecategory bg-img position-relative d-block"
+                        data-category="women">
+                        <img src="img/16.jpg" class="img-fluid" alt="Woman category">
+                        <div class="category-info overlay-text">
+                            <h3>Woman</h3>
+                            <p class="text-secondary">New Collection</p>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end shop section-->
+    <!-- start Our Product-->
+    <section class="Our-Product my-5">
+        <div class="container">
+            <div class="section-title my-5 text-center">
+                <h5>Top views in this week</h5>
+                <h2 class="fs-1">Discover Our Products </h2>
+            </div>
+            <div class="tab-List">
+                <ul class="nav nav-pills flex-wrap justify-content-start justify-content-md-center gap-2" id="pills-tab"
+                    role="tablist">
+                    <li class="nav-item hvr-bob flex-shrink-0 col-6 col-md-auto" role="presentation">
+                        <button class="nav-link p-2 text-secondary active w-100" id="pills-home-tab"
+                            data-bs-toggle="pill" data-bs-target="#pills-New-Products" type="button" role="tab"
+                            aria-controls="pills-New-Products" aria-selected="true">New Products</button>
+                    </li>
+                    <li class="nav-item hvr-bob flex-shrink-0 col-6 col-md-auto" role="presentation">
+                        <button class="nav-link p-2 text-secondary w-100" id="pills-contact-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-On-Sale-Products" type="button" role="tab"
+                            aria-controls="pills-On-Sale-Products" aria-selected="false">On Sale Products</button>
+                    </li>
+                    <li class="nav-item hvr-bob flex-shrink-0 col-6 col-md-auto" role="presentation">
+                        <button class="nav-link p-2 text-secondary w-100" id="pills-contact-tab2" data-bs-toggle="pill"
+                            data-bs-target="#pills-Trending-Products" type="button" role="tab"
+                            aria-controls="pills-Trending-Products" aria-selected="false">Trending Products</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content mt-5" id="pills-tabContent">
+                <div class="tab-pane fade product-tab show active" id="pills-New-Products" role="tabpanel"
+                    aria-labelledby="pills-home-tab">
+                    <div class="container">
+                        <div id="all-new-products" class="row  product-list">
+                        </div>
+                    </div>
+                    <div class="d-flex pagination-container justify-content-center mt-4"></div>
+                </div>
+                <div class="tab-pane product-tab fade" id="pills-On-Sale-Products" role="tabpanel"
+                    aria-labelledby="pills-contact-tab">
+                    <div class="container">
+                        <div id="instore-products" class="row product-list">
+                        </div>
+                    </div>
+                    <div class="d-flex pagination-container pagination-sale justify-content-center mt-4"></div>
+                </div>
+                <div class="tab-pane fade product-tab" id="pills-Trending-Products" role="tabpanel"
+                    aria-labelledby="pills-contact-tab2">
+                    <div class="container">
+                        <div id="trending-products" class="row product-list">
+
+                        </div>
+                    </div>
+                    <div class="d-flex pagination-container justify-content-center mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Our Product-->
+    <!-- end This Discover Accessories -->
+
+    <section class="weeks-featured pt-3 my-5">
+        <div class="container py-5">
+            <div class="section-title my-5 text-center">
+                <h5>Shop by Category</h5>
+                <h2 class="fs-1">Discover Accessories</h2>
+                <a href="#" class="hvr-sweep-to-right mt-3  text-decoration-none px-4 py-2 swep-a">
+                    View More Items <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div id="discover-Accessories" class="owl-carousel py-5 carousel2 w-100 owl-theme">
+                <!-- <div class="item col-12 col-md-12">
+                    <div
+                        class="d-flex flex-column flex-lg-row text-start p-4 justify-content-between product-card w-100">
+                        <div class="img-prod w-100 mb-3 mb-lg-0">
+                            <img class="w-100 h-100" src="img/19.png" alt="Clothing" />
+                        </div>
+                        <div class="content-prod w-100 ps-lg-4">
+                            <div class="star mb-2">
+                                <i class="fa-solid text-warning fa-star"></i>
+                                <i class="fa-solid text-warning fa-star"></i>
+                                <i class="fa-solid text-warning fa-star"></i>
+                                <i class="fa-solid text-warning fa-star"></i>
+                            </div>
+                            <h5 class="pt-3">
+                                <a class="fs-5 text-decoration-none text-dark" href="#">Classy Flare For Moment
+                                    Dress</a>
+                            </h5>
+                            <h6 class="fs-5">$75.00 <del class="fw-light fs-6">$90.00</del></h6>
+                            <a href="#" class="hvr-sweep-to-right text-decoration-none px-4 py-2 swep-a">
+                                Shop Now <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- start Trending Arrivals -->
+    <section class="Trending-Arrivals pt-3 my-5">
+        <div class="container py-5">
+            <div class="section-title my-5 text-center">
+                <div>
+                    <h5>More to Discover</h5>
+                    <h2 class="fs-1 pb-3">Trending Women Products
+                    </h2>
+                </div>
+                <a href="#" class="hvr-sweep-to-right text-decoration-none px-4 py-2 swep-a">
+                    View More Items <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="discover-trending  w-100 ">
+                <div class="row ">
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div id="trending-women" class="owl-carousel mb-4 carousel3 w-100 owl-theme">
+
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 ">
+                        <div class="bg-img position-relative d-block">
+                            <img src="img/22.jpg" class="mb-3 rounded-3  img-fluid" alt="">
+                            <div class="overlay-text-bg-img  position-absolute">
+                                <h5 class="pt-3">
+                                    <a class="fs-5 text-decoration-none text-light" href="#">Short Sleeve Tunic <br>
+                                        Tops Casual Swing</a>
+                                </h5>
+                                <a href="#" class="hvr-sweep-to-right mt-3 text-decoration-none px-4 py-2 swep-a">
+                                    Explore More <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Trending Arrivals -->
+
+    <!--start Best Seller Products -->
+    <section class="Best-Seller">
+        <div class="container ">
+            <div class="section-title my-5 text-center">
+                <div>
+                    <h5>Top views in this week</h5>
+                    <h2 class="fs-1 pb-3">Best Seller Products</h2>
+                </div>
+            </div>
+            <div id="best-seller-products" class="row product-list ">
+
+            </div>
+        </div>
+    </section>
+    <!--end Best Seller Products ===-->
+    <!--start review  section ===-->
+    <section class="customer-review overflow-hidden py-5 my-5">
+        <div class="container  px-5">
+            <div class="shape d-flex justify-content-center col-12 position-relative">
+                <img class="position-absolute col-9 " src="images/circle.png" alt="">
+                <div class="owl-carousel py-5 carousel4 w-100 owl-theme">
+                    <!-- Slide 1 -->
+                    <div class="item-review text-center text-black">
+                        <h2 style="color: var(--second-color);">customer review <i
+                                class="fa-regular ps-2 fa-comment"></i></h2>
+                        <div class="star py-4`">
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star-half-stroke"></i>
+                        </div>
+                        <p class=" py-3 fs-5">" the product was so nice "</p>
+                        <h6 class="user-comment  shadow-sm p-2 px-3 rounded-5 m-auto" id="user-comment ">-ahmed
+                            abdelaziz</h6>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="item-review text-center text-black">
+                        <h2 style="color: var(--second-color);">customer review <i
+                                class="fa-regular ps-2 fa-comment"></i></h2>
+                        <div class="star py-4`">
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star-half-stroke"></i>
+                        </div>
+                        <p class=" py-3 fs-5">" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi unde
+                            tenetur fugit harum ipsam reprehenderit laboriosam pariatur. "</p>
+                        <h6 class="user-comment  shadow-sm p-2 px-3 rounded-5 m-auto" id="user-comment ">-ahmed
+                            abdelaziz</h6>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="item-review text-center text-black">
+                        <h2 style="color: var(--second-color);">customer review <i
+                                class="fa-regular ps-2 fa-comment"></i></h2>
+                        <div class="star py-4`">
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star"></i>
+                            <i class="fa-solid text-warning fa-star-half-stroke"></i>
+                        </div>
+                        <p class=" py-3 fs-5">" the product was so nice "</p>
+                        <h6 class="user-comment  shadow-sm p-2 px-3 rounded-5 m-auto" id="user-comment ">-ahmed
+                            abdelaziz</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end review section ===-->
+    <!--start follow us ===-->
+    <section class="follow-us">
+        <div class="container-fluid">
+            <div class="section-title text-center">
+                <h3 style="color: var(--second-color);">Follow Us on Instagram <i class="fa-brands fa-instagram"></i>
+                </h3>
+            </div>
+            <div class="owl-carousel py-5 carousel5 w-100 owl-theme">
+                <div class="follow-img">
+                    <img src="img/16 (1).jpg" alt="">
+                    <div
+                        class="overlay-follow position-absolute w-100 h-100 top-0 end-0 d-flex justify-content-center align-items-center  hvr-bounce-to-bottom">
+                        <a href="https://www.instagram.com/" target="_blank"> <i
+                                class="fa-brands fs-2 text-light fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="follow-img">
+                    <img src="img/15 (1).jpg" alt="">
+                    <div
+                        class="overlay-follow position-absolute w-100 h-100 top-0 end-0 d-flex justify-content-center align-items-center  hvr-bounce-to-bottom">
+                        <a href="https://www.instagram.com/" target="_blank"> <i
+                                class="fa-brands fs-2 text-light fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="follow-img">
+                    <img src="img/14 (1).jpg" alt="">
+                    <div
+                        class="overlay-follow position-absolute w-100 h-100 top-0 end-0 d-flex justify-content-center align-items-center  hvr-bounce-to-bottom">
+                        <a href="https://www.instagram.com/" target="_blank"> <i
+                                class="fa-brands fs-2 text-light fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="follow-img">
+                    <img src="img/17.jpg" alt="">
+                    <div
+                        class="overlay-follow position-absolute w-100 h-100 top-0 end-0 d-flex justify-content-center align-items-center  hvr-bounce-to-bottom">
+                        <a href="https://www.instagram.com/" target="_blank"> <i
+                                class="fa-brands fs-2 text-light fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="follow-img">
+                    <img src="img/13.jpg" alt="">
+                    <div
+                        class="overlay-follow position-absolute w-100 h-100 top-0 end-0 d-flex justify-content-center align-items-center  hvr-bounce-to-bottom">
+                        <a href="https://www.instagram.com/" target="_blank"> <i
+                                class="fa-brands fs-2 text-light fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end follow us ===-->
+
+    <div class="row"></div>
+
+
+    <!-- Footer Section -->
+    <footer class="container-fluid  text-light mt-5">
+        <div class="row p-5">
+            <div class="col-lg-3 col-md-6">
+                <img src="img/Logo 2.png" alt="" class="mb-4">
+                <p>VivaDecor your premier destination for luxury and modern interior design</p>
+                <div class="social">
+                    <i class="fa-brands fa-facebook-f me-3"></i>
+                    <i class="fa-brands fa-twitter me-3"></i>
+                    <i class="fa-brands fa-instagram me-3"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mt-md-0 mt-sm-4">
+                <h5 class="fw-bold mb-4">About</h5>
+                <p>Interior design</p>
+                <p>Outdoor design</p>
+                <p>Lightning design</p>
+                <p>Office design</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mt-lg-0 mt-md-3 mt-sm-4 ">
+                <h5 class="fw-bold mb-4">Our Services</h5>
+                <p>Reviews</p>
+                <p>Careers</p>
+                <p>Pricing</p>
+                <p>Press inquires</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mt-lg-0 mt-md-3 mt-sm-3 ">
+                <h5 class="fw-bold mb-4">Our Services</h5>
+                <p>info@vivadecor.com</p>
+                <p>Design Avenue Cityville, CA 90210 United States</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#up" class="arrow-up-btn text-decoration-none  rounded-3 ">
+        <i class="fa-solid fa-arrow-up swep-a p-2 rounded-3 position-fixed bottom-0 end-0 m-3 z-3"></i>
+    </a>
+
+
+    <!-- .......scripts...... -->
+
+    <!-- font awesome -->
+    <script src="JS/all.min.js"></script>
+    <!-- bootstrap -->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- my js script -->
+    <script src="JS/home.js"></script>
+    <!-- .......scripts...... -->
+
+</body>
+
+</html>

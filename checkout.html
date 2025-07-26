@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/checkout.css">
+    <title>Checkout</title>
+
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <h1 class="text-center">Checkout </h1>
+            <hr>
+            <!-- Shipping Form -->
+
+            <div class="col-md-7 shipping_form">
+                <div class=" p-4 ">
+                    <h2 class="mb-4">Shipping Address</h2>
+                    <form class="row g-3 needs-validation" id="checkoutForm" novalidate>
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" pattern="^[A-Za-z]+$" required />
+                            <div class="invalid-feedback">Please enter your first name.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" pattern="^[A-Za-z]+$" required />
+                            <div class="invalid-feedback">Please enter your last name.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone1" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="phone1" pattern="^(010|011|012|015)[0-9]{8}$"
+                                required />
+                            <div class="invalid-feedback">Please enter your phone number.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone2" class="form-label">Second Phone Number</label>
+                            <input type="text" class="form-control" id="phone2" pattern="^(010|011|012|015)[0-9]{8}$" />
+                            <div class="invalid-feedback">Please enter a second phone number.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="country" pattern="^[A-Za-z\s]+$" required />
+                            <div class="invalid-feedback">Please enter your country.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="state" class="form-label">State / Province / Region</label>
+                            <input type="text" class="form-control" id="state" pattern="^[A-Za-z\s]+$" required />
+                            <div class="invalid-feedback">Please enter your state or region.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" pattern="^[A-Za-z\s]+$" required />
+                            <div class="invalid-feedback">Please enter your city.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="zip" class="form-label">ZIP / Postal Code</label>
+                            <input type="text" class="form-control" id="zip" pattern="^\d{7}$" required />
+                            <div class="invalid-feedback">Please enter your postal code.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="address" class="form-label">Street Address</label>
+                            <input type="text" class="form-control" id="address" required />
+                            <div class="invalid-feedback">Please provide an address.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="notes" class="form-label">Additional Notes</label>
+                            <textarea class="form-control " id="notes" rows="6"
+                                placeholder="Any delivery instructions or notes..."></textarea>
+                        </div>
+                        <!-- <div class="col-12 text-end">
+                            <button class="btn btn-success mt-3 col-12" type="submit">Save Address</button>
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+
+            <!-- Payment Summary -->
+            <div class="col-md-5">
+                <h3 class="mb-4">Your Order</h3>
+                <div class="order_details ">
+                    <div class="d-flex justify-content-between text-muted small border-bottom pb-2 mb-2">
+                        <span class="fw-semibold">Product</span>
+                        <span class="fw-semibold">Quantity</span>
+                        <span class="fw-semibold">Price</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="product_name"></div>
+                        <div class="product_amount text-end"></div>
+                        <div class="product_price text-end"></div>
+                    </div>
+                </div>
+
+                <hr />
+                <h5 class="mb-3">Order Summary</h5>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Sub Total:</span>
+                    <span id="subtotal"></span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Shipping:</span>
+                    <span id="shipping_price"></span>
+                </div>
+                <div class="d-flex justify-content-between fw-bold fs-5 border-top pt-3">
+                    <span>Grand Total:</span>
+                    <span id="total"></span>
+                </div>
+
+                <hr>
+                <div class="payment">
+                    <h3 class="mb-3">Payment Methods</h3>
+                    <div class="accordion w-100" id="paymentAccordion">
+                        <div class="accordion-item border-0 rounded mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingCredit">
+                                <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseCredit" aria-expanded="false"
+                                    aria-controls="collapseCredit">
+                                    <input class="form-check-input mt-0" type="radio" name="payment_method" id="credit">
+                                    <label class="form-check-label ms-2 mb-0 fw-bold" for="credit">Credit
+                                        Card</label>
+                                </button>
+                            </h2>
+                            <div id="collapseCredit" class="accordion-collapse collapse" aria-labelledby="headingCredit"
+                                data-bs-parent="#paymentAccordion">
+                                <div class="accordion-body bg-light rounded-bottom">
+                                    <form class="p-3 bg-white rounded shadow-sm">
+                                        <div class="mb-3">
+                                            <label for="cardName" class="form-label">Cardholder Name</label>
+                                            <input type="text" class="form-control" id="cardName"
+                                                pattern="^[A-Za-z\s]+$" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="cardNumber" class="form-label">Card Number</label>
+                                            <input type="text" class="form-control" id="cardNumber"
+                                                placeholder="1234 5678 9012 3456" pattern="^[0-9]{12}(?:[0-9]{3})?$"
+                                                maxlength="19" required>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cardExpiry" class="form-label">Expiry Date</label>
+                                                <input type="text" class="form-control" id="cardExpiry"
+                                                    placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/(\d{2}|\d{4})$"
+                                                    maxlength="5" required>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cardCVC" class="form-label">CVC</label>
+                                                <input type="text" class="form-control" pattern="^\d{3}$" id="cardCVC"
+                                                    maxlength="4" required>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 rounded mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingCash">
+                                <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseCash" aria-expanded="false"
+                                    aria-controls="collapseCash">
+                                    <input class="form-check-input mt-0" type="radio" name="payment_method" id="cash">
+                                    <label class="form-check-label ms-2 mb-0 fw-bold" for="cash">Cash</label>
+                                </button>
+                            </h2>
+                            <div id="collapseCash" class="accordion-collapse collapse" aria-labelledby="headingCash"
+                                data-bs-parent="#paymentAccordion">
+                                <div class="accordion-body bg-light rounded-bottom">
+                                    <p class="mb-0">You will pay in cash upon delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-lg bg-dark text-white" id="confirm">Confirm your order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal to take review-->
+
+        <div class="modal fade" id="reviewModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="reviewModalLabel" aria-hidden="true" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-4 shadow-sm">
+                    <div class="modal-header bg-dark  text-white rounded-top-4">
+                        <h5 class="modal-title" id="reviewModalLabel">Thank You! Please Leave a Review</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form id="reviewForm">
+                            <div class="mb-3 text-center">
+                                <label class="form-label d-block mb-2">Your Rating</label>
+                                <div id="starRating" class="star-rating d-flex justify-content-center gap-2 fs-2"
+                                    data-rating="0">
+                                    <i class="fa-solid fa-star" data-value="1"></i>
+                                    <i class="fa-solid fa-star" data-value="2"></i>
+                                    <i class="fa-solid fa-star" data-value="3"></i>
+                                    <i class="fa-solid fa-star" data-value="4"></i>
+                                    <i class="fa-solid fa-star" data-value="5"></i>
+                             
+                                </div>
+                                <input type="hidden" id="rating" name="rating" required>
+                                <div class="invalid-feedback">Please select a rating.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reviewText" class="form-label">Your Feedback</label>
+                                <textarea class="form-control" id="reviewText" rows="4"
+                                    placeholder="What did you like or dislike?" required></textarea>
+                                <div class="invalid-feedback">Please enter your review.</div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-dark text-white btn-lg">Submit Review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="toastContainer" class="position-fixed top-0 start-0 end-0 p-3"
+        style="z-index: 11; display: flex; flex-direction: column; align-items: center;">
+        <div id="toast" class="toast align-items-center text-white  border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="JS/checkout.js"></script>
+
+
+</body>
+
+</html>
