@@ -8,7 +8,7 @@ This version mainly focuses on the **Seller Dashboard**, where sellers can add p
 
 ---
 
-## 🚀 Live Demo & Repository
+## 🚀  Repository
 
 - 🗂️ **GitHub Repository:** [SnapBuy Repo](https://github.com/abdelfatahmoustafa/SnapBuy-E-commerce.git)
 
