@@ -10,7 +10,6 @@ This version mainly focuses on the **Seller Dashboard**, where sellers can add p
 
 ## 🚀 Live Demo & Repository
 
-- 🔗 **Live Demo:** [SnapBuy Live](https://your-live-demo-link.com)
 - 🗂️ **GitHub Repository:** [SnapBuy Repo](https://github.com/abdelfatahmoustafa/SnapBuy-E-commerce.git)
 
 > _(Replace the links above with your actual live and repo URLs)_
